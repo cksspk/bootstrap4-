@@ -1,0 +1,300 @@
+/**************************通用样式begin**************************/
+
+body{
+    color: #000;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+ol,ul{
+    list-style: none;
+}
+
+/*设置字体*/
+@font-face {
+    font-family: lk;
+    src: url('../fonts/lk.eot') format('embedded-opentype'),
+    url('../fonts/lk.svg') format('svg'),
+    url('../fonts/lk.ttf') format('truetype'),
+    url('../fonts/lk.woff') format('woff');
+}
+/*选择器进行匹配*/
+[class^="icon-"],[class*=" icon-"]{
+    font-family: lk;
+    font-style: normal;
+}
+/*自定义样式按钮*/
+.btn-register {
+    color: #FFFFFF;
+    background-color: #0AB4F7;
+    border-color: #F4F7F7;
+}
+
+.btn-register:hover,
+.btn-register:focus,
+.btn-register:active,
+.btn-register.active,
+.open .dropdown-toggle.btn-register {
+    color: #FFFFFF;
+    background-color: #086DF2;
+    border-color: #F4F7F7;
+}
+
+.btn-register:active,
+.btn-register.active,
+.open .dropdown-toggle.btn-register {
+    background-image: none;
+}
+
+.btn-register.disabled,
+.btn-register[disabled],
+fieldset[disabled] .btn-register,
+.btn-register.disabled:hover,
+.btn-register[disabled]:hover,
+fieldset[disabled] .btn-register:hover,
+.btn-register.disabled:focus,
+.btn-register[disabled]:focus,
+fieldset[disabled] .btn-register:focus,
+.btn-register.disabled:active,
+.btn-register[disabled]:active,
+fieldset[disabled] .btn-register:active,
+.btn-register.disabled.active,
+.btn-register[disabled].active,
+fieldset[disabled] .btn-register.active {
+    background-color: #0AB4F7;
+    border-color: #F4F7F7;
+}
+
+.btn-register .badge {
+    color: #0AB4F7;
+    background-color: #FFFFFF;
+}
+/**************************通用样式end**************************/
+
+
+/**************************头部样式begin**************************/
+#ck-header{}
+#ck-header .top-bar{
+    height: 40px;
+    line-height: 39px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+#ck-header .top-bar .container .row>div+div{
+   border-left: 1px solid #e0e0e0;
+}
+
+#ck-header .top-bar .container .row .top-bar-1 a{
+    position: relative;
+}
+
+
+#ck-header .top-bar .container .row .top-bar-1 a img{
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    display: none;
+}
+
+/*当鼠标移动到a标签，显示a标签下的图片*/
+#ck-header .top-bar .container .row .top-bar-1 a:hover img{
+    display: block;
+}
+
+/*字体编码文件*/
+.icon-phone::before{
+    content: '\e958';
+    font-size: 13px;
+}
+.icon-tel::before{
+    content: '\e942';
+    font-size: 13px;
+}
+
+#ck-header .navbar-ck{
+    border-bottom: 1px solid #e0e0e0;
+}
+
+#ck-header .navbar-ck .navbar-brand{
+    height: 70px;
+    /*background-color: red;*/
+    margin-left: 15px;
+    margin-right: 60px;
+}
+/*品牌logo*/
+#ck-header .navbar-ck .navbar-brand img{
+    width: 180px;
+}
+
+/*header中下部分-- 使用flex布局*/
+/*#ck-header .navbar-ck .navbar-nav>li>a{*/
+    /*height: 70px;*/
+    /*!*background-color: red;*!*/
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    /*margin-right: 10px;*/
+/*}*/
+/*#ck-header .navbar-ck .navbar-nav>li>a:hover{*/
+
+    /*border-bottom: 2px solid purple;*/
+/*}*/
+/*#ck-header .navbar-ck .navbar-toggler{*/
+    /*margin-top: 5px;*/
+/*}*/
+
+/*header中下部分-- 使用height*/
+#ck-header .navbar-ck .navbar-nav>li>a{
+    height: 50px;
+    line-height: 40px;
+    margin-right: 10px;
+}
+#ck-header .navbar-ck .navbar-nav li.active a,
+#ck-header .navbar-ck .navbar-nav>li>a:hover{
+    border-bottom: 2px solid purple;
+}
+/**************************头部样式end**************************/
+
+
+
+/**************************轮播图 begin**************************/
+#ck-carousel{}
+
+#ck-carousel .carousel-item{
+    background: no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+
+}
+#ck-carousel .carousel-item img{
+    width: 100%;
+}
+
+@media screen  and ( min-width: 800px){
+    #ck-carousel .carousel-item{
+        height: 410px;
+    }
+}
+/**************************轮播图 end**************************/
+
+
+/**************************热门课程 begin**************************/
+#ck-hot{}
+#ck-hot .lesson{
+    padding: 15px 10px;
+}
+
+#ck-hot .lesson .media-left{
+    width: 20%;
+}
+
+#ck-hot .lesson .media-body{
+    width: 60%;
+    vertical-align: middle;
+}
+
+
+#ck-hot .lesson .media-right{
+    width: 20%;
+    /*text-align: left;*/
+    /*font-size: 16px;*/
+    /*vertical-align: middle;*/
+    line-height: 82px;
+}
+#ck-hot h4{
+    font-size: 18px;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+/**************************热门课程 end**************************/
+
+
+/**************************产品中心 begin**************************/
+#ck-product{
+    background-color: #f0f0f0;
+    padding: 40px 0;
+}
+/*去除边框*/
+#ck-product .nav-item {
+    font-size: 18px;
+}
+#ck-product .nav-item a{
+    border: none;
+    color: #999;
+    padding: 10px 20px;
+}
+/*设置下标线*/
+#ck-product .nav-item a.active{
+    /*border: none;*/
+    background-color: transparent;
+    border-bottom: 2px solid #0AB4F7;
+    color: #000;
+}
+
+/*内容部分*/
+#ck-product .tab-content .pd-left{
+    padding: 40px 0;
+}
+#ck-product .tab-content #pd_one_1 h5{
+    font-size: 14px;
+}
+
+#pd_one_1{
+    margin: 15px 0;
+}
+
+#pd_one_2{
+    background-color: transparent;
+}
+
+#pd_one_4{
+    margin: 15px 0;
+}
+
+#ck-product #pd_two_1{
+    padding: 100px 0;
+}
+
+#ck-product #pd_two_1 h1{
+    margin-bottom: 15px;
+}
+
+/**************************产品中心 end**************************/
+
+
+/**************************关于我们 begin**************************/
+#ck-about{
+
+}
+/**************************关于我们 end**************************/
+
+
+/**************************友情链接 begin**************************/
+#ck-link{
+
+}
+/**************************友情链接 end**************************/
+
+
+/**************************尾部 begin**************************/
+#ck-footer{
+    background: url("../imgs/ft_bg.png") no-repeat center;
+    color: #fff;
+    width: 100%;
+    height: 200px;
+}
+#ck-footer .container .row{
+    height: 200px;
+    /*background-color: red;*/
+}
+#ck-footer .container .row .row a{
+    color: #fff;
+}
+/**************************尾部 end**************************/
